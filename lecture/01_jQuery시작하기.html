@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_jQuery시작하기</title>
+    <!-- script src="../resource/js/jquery-3.6.3.slim.min.js" -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>jQuery 개요</h1>
+    <h3>jQuery란?</h3>
+    <p>
+        기존 복잡했던 클라이언트 측 HTML 스크립팅을 간소화 하기 위해 고안 된
+        JavaScript 라이브러리로 적은 양의 코드로 빠르고, 풍부한 기능을 제공한다.
+    </p>
+    
+    <h3>jQuery 연결 방법</h3>
+    <p>
+        - jQuery 공식 사이트 : https://jquery.com/ <br>
+        - jQuery 라이브러리 제공 페이지 : https://code.jquery.com/ <br>
+
+        1. jQuery 라이브러리 다운로드를 통한 연결
+        : js 파일을 다운로드 하여 파일 경로 지정 <br>
+        2. CDN(Content Delivery Network)을 통한 연결
+        : 제공하는 주소를 이용하여 파일 경로 지정
+
+    </p>
+
+    <h3>jQuery 시작하기</h3>
+    <p>
+        문서가 로드 된 이후 jQuery를 실행하는 방법
+        (window.onload 속성과 같은 개념의 메소드) <br>
+        1) $(document).ready(function(){}); <br>
+        2) $(function(){}); <br><br>
+
+        jQuery 기본 형태 : $('선택자').메소드명('속성', '속성값');
+    </p>
+    <script>
+        $(document).ready(function(){
+
+        });
+
+        $(function(){
+            $("*").css('color', 'red');
+        });
+    </script>
+</body>
+</html>
