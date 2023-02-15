@@ -102,10 +102,52 @@
         $(function(){
             $(".menu").click(function(){
                 if($(this).next("p").css("display") === 'none'){
+                    $("p.contents").slideUp();
                     $(this).next("p").slideDown();
                 } else {
                     $(this).next("p").slideUp();
                 }
+
+                // $(this).next("p").slideToggle();
+            });
+        });
+    </script>
+
+    <h3>fade 메소드</h3>
+    <p>
+        fadeIn : 점점 진하게 변하면서 보여지는 효과,
+        fadeOut : 점점 희미하게 변하면서 사라지는 효과,
+        fadeTo : 설정한 값 까지 희미해지는 효과 (opacity 값으로 투명도 조절)
+    </p>
+
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <img id="diningtable" src="../resource/images/diningtable.gif">
+
+    <br>
+    <img id="flower" src="../resource/images/flower1.PNG">
+
+    <script>
+        $(function(){
+            $("#fadeIn").click(function(){
+                $("#diningtable").fadeIn(2000);
+            });
+
+            $("#fadeOut").click(function(){
+                $("#diningtable").fadeOut(2000);
+            });
+
+            $("#fadeToggle").click(function(){
+                $("#diningtable").fadeToggle(2000, function(){
+                    alert('토글 완료!');
+                });
+            });
+
+            $("#flower").hover(function(){
+                $("#flower").fadeTo(3000, 0.5);
+            }, function(){
+                $("#flower").fadeTo(3000, 1);
             });
         });
     </script>
